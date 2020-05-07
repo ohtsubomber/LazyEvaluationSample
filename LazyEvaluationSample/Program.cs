@@ -16,9 +16,9 @@ namespace LazyEvaluationSample
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            var data = new List<string>() { "1", "2" };
+            var data = new List<string>() { "1", "3" };
             
-            foreach(var str in GetLazyEvaluationList())
+            foreach(var str in GetLazyEvaluationList().Where(val=>data.Contains(val)))
             {
                 data.Remove(str);
                 //do task
